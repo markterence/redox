@@ -19,7 +19,7 @@ function createWindow () {
   var url = 'file://' + __dirname + '/../www/index.html';
   var Args = process.argv.slice(2);
   Args.forEach(function (val) {
-	  if (val === "test") {
+	  if (val === "serve") {
 		  url = 'http://localhost:8100'
 		  console.log('using localhost:8100')
 	  }
