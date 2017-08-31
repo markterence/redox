@@ -12,9 +12,7 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "electron":"electron .",
-    "electron dist":"electron .",
-    "electron watch" : "electron . test",
-    "re:dox": "ionic serve && electron watch"
+    "electron serve":"electron ."
   },
   "dependencies": {
     "@angular/common": "4.1.3",
