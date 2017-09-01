@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ElectronServiceProvider } from '../providers/electron-service/electron-service';
+import { CornataProvider } from '../providers/cornata/cornata';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ElectronServiceProvider,
+    CornataProvider
   ]
 })
 export class AppModule {}
