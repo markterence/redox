@@ -14,6 +14,15 @@ Node: 5.3.0
 ```bash
 npm install -g electron
 ```
+### Packaging
+Redox uses `electron-packager`  
+- See, [Electron-Packager API Docs](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md) for more information.
+- [Electron-Packager](https://github.com/electron-userland/electron-packager)
+```bash
+#build electron win32 app
+npm run ebuild_win32
+```
+
 
 # Running
 - Open 1st command line, then
