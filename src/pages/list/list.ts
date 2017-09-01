@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { CornataProvider } from "../../providers/cornata/cornata";
+
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
@@ -10,7 +12,7 @@ export class ListPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cornata: CornataProvider) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -25,7 +27,10 @@ export class ListPage {
         note: 'This is item #' + i,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
-    }
+		}
+		
+		console.log('Cornata');
+		console.log(cornata.get());
   }
 
   itemTapped(event, item) {
