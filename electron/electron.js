@@ -13,9 +13,12 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+	mainWindow = new BrowserWindow({show:false})
+	
   mainWindow.maximize();
-
+	mainWindow.once('ready-to-show', () => {
+		mainWindow.show()
+	})
   var url = 'file://' + __dirname + '/../www/index.html';
   var Args = process.argv.slice(2);
   Args.forEach(function (val) {
